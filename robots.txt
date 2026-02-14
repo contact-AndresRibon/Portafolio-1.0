@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /recursos/
+
+Sitemap: https://andresribon.com/sitemap.xml
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

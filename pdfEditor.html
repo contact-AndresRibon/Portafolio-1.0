@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Editor y Firmador de PDF: Herramienta desktop profesional para editar, anotar y firmar documentos PDF. Desarrollado en Python con soporte para texto, dibujos, sellos y firmas digitales.">
+    <meta name="keywords" content="editor PDF, firmador digital, Python, herramienta desktop, edición documentos, firma digital, anotaciones PDF, procesamiento de documentos">
+    <meta name="author" content="Andres Ribon">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Editor y Firmador de PDF - Herramienta Desktop Python">
+    <meta property="og:description" content="Aplicación desktop para editar, anotar y firmar documentos PDF con interfaz intuitiva y funcionalidades avanzadas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://andresribon.com/pdfEditor">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Editor y Firmador de PDF - Proyecto Python">
+    <meta name="twitter:description" content="Herramienta desktop profesional para gestión y firma de documentos PDF">
+    <link rel="canonical" href="https://andresribon.com/pdfEditor">
+    <title>Editor y Firmador de PDF | Herramienta Desktop Python | Proyecto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="presentacion-page">
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <div class="lightbox-content">
+            <button class="lb-close" aria-label="Cerrar">×</button>
+            <button class="lb-prev" aria-label="Anterior">❮</button>
+            <img class="lb-image" src="" alt="">
+            <button class="lb-next" aria-label="Siguiente">❯</button>
+            <div class="lb-caption"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="project-link">Volver al Portafolio</a> 
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>         
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#tech">Tecnologías</a></li>
+                <li><a href="#funcionalidades">Funcionalidades</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container fade-in">
+            <h1>Editor y Firmador de PDF</h1>
+            <p class="description">Editor y Firmador de PDF es una herramienta desktop profesional desarrollada en Python que permite editar, anotar y firmar documentos PDF con una interfaz intuitiva y potente. Ofrece funcionalidades avanzadas para trabajar con documentos de forma eficiente, incluyendo la capacidad de agregar texto, dibujos, sellos, firmas digitales y metadatos personalizados.
+            <br><br>
+            La aplicación está diseñada pensando en usuarios que necesitan gestionar documentos de manera profesional: desde agregación de información hasta firma digital segura. Con un flujo de trabajo optimizado y controles intuitivos, permite realizar operaciones complejas sin necesidad de herramientas externas costosas. Soporta exportación con metadatos, preservación de calidad de imagen, y arquitectura modular para futuras extensiones.</p>
+        </div>
+    </section>
+
+    <!-- Características Section -->
+    <section id="caracteristicas" class="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Características Principales</h2>
+
+            <div class="projects-grid">
+                <figure class="project-card fade-in">
+                    <img src="recursos/firmador/Interfaz.png" alt="Interfaz de Edición" loading="lazy" data-full="recursos/firmador/Interfaz.png">
+                    <figcaption class="project-content">
+                        <h3 class="project-title">Edición Intuitiva</h3>
+                        <p class="project-description">Interfaz limpia y fácil de usar con herramientas de edición organizadas lógicamente para máxima productividad.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="project-card fade-in">
+                    <img src="recursos/firmador/Anotaciones.png" alt="Sistema de Anotaciones" loading="lazy" data-full="recursos/firmador/Anotaciones.png">
+                    <figcaption class="project-content">
+                        <h3 class="project-title">Anotaciones y Dibujos</h3>
+                        <p class="project-description">Herramientas de dibujo libre, texto multilínea, sellos, flechas y formas geométricas personalizables.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="project-card fade-in">
+                    <img src="recursos/firmador/FIRMA.png" alt="Firma Digital" loading="lazy" data-full="recursos/firmador/FIRMA.png">
+                    <figcaption class="project-content">
+                        <h3 class="project-title">Firma Digital</h3>
+                        <p class="project-description">Soporte para firmas digitales seguras con certificados y autenticación de documentos.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologías Section -->
+    <section id="tech">
+        <div class="container">
+            <div class="tech-block fade-in">
+                <h2 class="section-title">Stack Tecnológico</h2>
+                <div class="skills-grid">
+                    <div class="skill-category fade-in">
+                        <h3>Core</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python 3.8+</span>
+                            <span class="skill-tag">PyPDF2</span>
+                            <span class="skill-tag">Tkinter</span>
+                            <span class="skill-tag">PIL/Pillow</span>
+                            <span class="skill-tag">Reportlab</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category fade-in">
+                        <h3>Características</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Desktop Application</span>
+                            <span class="skill-tag">PDF Processing</span>
+                            <span class="skill-tag">Firma Digital</span>
+                            <span class="skill-tag">Anotaciones</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category fade-in">
+                        <h3>Herramientas</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">PyCharm</span>
+                            <span class="skill-tag">pip</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionalidades Section -->
+    <section id="funcionalidades" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">Funcionalidades Destacadas</h2>
+
+            <div class="features-grid">
+                <article class="feature-card fade-in">
+                    <h3 class="feature-title">Edición de documentos</h3>
+                    <p class="feature-body">Carga archivos PDF completos y editables con visualización fluida. Acceso a todas las páginas con navegación rápida y vistas previas en miniatura.</p>
+                    <ul class="feature-list">
+                        <li>Carga y visualización de archivos PDF</li>
+                        <li>Navegación entre páginas</li>
+                        <li>Zoom y ajuste de vista</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <h3 class="feature-title">Herramientas de anotación</h3>
+                    <p class="feature-body">Suite completa de herramientas para marcar, dibujar y anotar documentos. Desde texto simple hasta dibujos complejos, todo integrado en una interfaz unificada.</p>
+                    <ul class="feature-list">
+                        <li>Texto con fuentes y tamaños personalizables</li>
+                        <li>Herramienta de dibujo libre</li>
+                        <li>Sellos, flechas y formas geométricas</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <h3 class="feature-title">Firma y exportación</h3>
+                    <p class="feature-body">Firma documentos digitalmente y exporta con metadatos preservados. Mantén la integridad del documento mientras agregas capas de validación y seguridad.</p>
+                    <ul class="feature-list">
+                        <li>Firma digital con certificados</li>
+                        <li>Exportación con metadatos</li>
+                        <li>Preservación de calidad de imagen</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container fade-in">
+            <h2>¿Listo para trabajar juntos?</h2>
+            <p class="contact-description">
+                Estoy disponible para proyectos freelance remotos. 
+                Si tienes una idea o proyecto en mente, ¡hablemos!
+            </p>
+            <div class="contact-links">
+                <a href="mailto:contact.andresribon@gmail.com" class="contact-link">contact.andresribon@gmail.com</a>
+                <a href="https://www.linkedin.com/in/andresribon08" class="contact-link" target="_blank">LinkedIn</a>
+                <a href="https://github.com/contact-AndresRibon" class="contact-link" target="_blank">GitHub</a>
+                <a href="https://wa.me/57XXXXXXXXX" class="contact-link" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schema.org Markup - Software Application -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Editor y Firmador de PDF",
+      "description": "Herramienta desktop para editar, anotar y firmar documentos PDF con interfaz intuitiva",
+      "creator": {
+        "@type": "Person",
+        "name": "Andres Ribon",
+        "url": "https://andresribon.com"
+      },
+      "applicationCategory": "Utility",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "Consultar"
+      },
+      "featureList": [
+        "Edición de documentos PDF",
+        "Anotaciones y dibujos",
+        "Firma digital segura",
+        "Exportación con metadatos",
+        "Interfaz intuitiva",
+        "Múltiples herramientas de edición"
+      ],
+      "technicalRequirements": "Python 3.8+, Sistema operativo: Windows, macOS, Linux"
+    }
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

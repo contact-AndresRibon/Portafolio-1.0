@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HabitTracker: Aplicación web para registrar y monitorear tus hábitos diarios. Visualiza tu progreso con rachas, estadísticas y recompensas. Construye consistencia en tus objetivos personales.">
+    <meta name="keywords" content="habit tracker, seguimiento hábitos, aplicación web, rachas diarias, estadísticas personales, React, productividad, desarrollo personal">
+    <meta name="author" content="Andres Ribon">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="HabitTracker - Seguimiento de Hábitos Diarios">
+    <meta property="og:description" content="App para registrar, monitorear y celebrar tus hábitos diarios. Visualiza rachas, estadísticas y mantén la consistencia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://andresribon.com/habittracker">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HabitTracker - Seguimiento de Hábitos">
+    <meta name="twitter:description" content="Aplicación web para construir y mantener hábitos consistentes">
+    <link rel="canonical" href="https://andresribon.com/habittracker">
+    <title>HabitTracker | App Seguimiento de Hábitos Diarios | React</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="presentacion-page">
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <div class="lightbox-content">
+            <button class="lb-close" aria-label="Cerrar">×</button>
+            <button class="lb-prev" aria-label="Anterior">❮</button>
+            <img class="lb-image" src="" alt="">
+            <button class="lb-next" aria-label="Siguiente">❯</button>
+            <div class="lb-caption"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="project-link">Volver al Portafolio</a> 
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>         
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#tech">Tecnologías</a></li>
+                <li><a href="#arquitectura">Implementación</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container fade-in">
+            <h1>HabitTracker - App de Seguimiento de Hábitos</h1>
+            <p class="description">HabitTracker es una aplicación web intuitiva para registrar y seguir tus hábitos diarios de forma simple y visual. Permite crear hábitos personalizados, marcar completados cada día, ver tu progreso con visualización de rachas consecutivas, y consultar estadísticas detalladas de cumplimiento. Incluye un sistema de recompensas para mantener la motivación.
+            <br><br>
+            La interfaz es completamente intuitiva y responsiva, funcionando perfectamente en móviles y computadoras de escritorio. El objetivo es ayudarte a mantener la consistencia en los hábitos que deseas formar, mostrando de manera clara cuántos días seguidos has cumplido y cuál es tu progreso general. Ideal para productividad personal y desarrollo de buenos hábitos.</p>
+        </div>
+    </section>
+
+    <!-- Demostración / Galería -->
+    <section id="galeria" class="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Galería del Sistema</h2>
+
+            <div class="projects-grid">
+                <figure class="project-card fade-in">
+                    <img src="recursos/habitTracker/dashboard.png" alt="Dashboard Principal" loading="lazy" data-full="recursos/habitTracker/dashboard.png">
+                    <figcaption class="project-content">
+                        <h3 class="project-title">Dashboard Principal</h3>
+                        <p class="project-description">Resumen visual de todos tus hábitos, mostrando el estado actual, rachas activas y porcentaje de cumplimiento general.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="project-card fade-in">
+                    <img src="recursos/habitTracker/habitos.png" alt="Sistema de Habitos" loading="lazy" data-full="recursos/habitTracker/habitos.png">
+                    <figcaption class="project-content">
+                        <h3 class="project-title">Sistema de Hábitos</h3>
+                        <p class="project-description">Crear nuevos hábitos especificando su nombre, frecuencia diaria o semanal, y categoría. Interfaz simple para marcar completados cada día.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="project-card fade-in">
+                    <img src="recursos/habitTracker/recompensas.png" alt="Sistema de Recompensas" loading="lazy" data-full="recursos/habitTracker/recompensas.png">
+                    <figcaption class="project-content">
+                        <h3 class="project-title">Sistema de Recompensas</h3>
+                        <p class="project-description">Gana puntos al completar hábitos y desbloquea insignias para mantener la motivación con logros visuales, para posteriormente usarlos en recompensas elegidas por el usuario.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologías Section -->
+    <section id="tech">
+        <div class="container">
+            <div class="tech-block fade-in">
+                <h2 class="section-title">Stack Tecnológico</h2>
+                <div class="skills-grid">
+                    <div class="skill-category fade-in">
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript ES6+</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category fade-in">
+                        <h3>Backend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">REST API</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category fade-in">
+                        <h3>Herramientas</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Postman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementación Section -->
+    <section id="arquitectura" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">Implementación</h2>
+
+            <div class="features-grid">
+                <article class="feature-card fade-in">
+                    <h3 class="feature-title">Diseño técnico</h3>
+                    <p class="feature-body">Frontend desarrollado con React para una interfaz responsiva y fluida. Backend con Node.js y Express para gestionar usuarios, hábitos y datos de progreso. Base de datos relacional para almacenar el historial de completados.</p>
+                    <ul class="feature-list">
+                        <li>API REST para comunicación entre frontend y backend</li>
+                        <li>Autenticación de usuarios con sesiones</li>
+                        <li>Base de datos para persistencia de datos</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <h3 class="feature-title">Funcionalidades clave</h3>
+                    <p class="feature-body">Herramientas esenciales para mantener el seguimiento de tus hábitos: marcar tareas como completadas, visualizar tu racha actual y ver estadísticas de cumplimiento básicas.</p>
+                    <ul class="feature-list">
+                        <li>Marcar hábitos completados con un clic</li>
+                        <li>Visualización de rachas y porcentaje de cumplimiento</li>
+                        <li>Vista de historial semanal y mensual</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <h3 class="feature-title">Resultados e impacto</h3>
+                    <p class="feature-body">Una herramienta práctica para ayudarte a construir y mantener hábitos consistentemente. Ver el progreso de forma visual motiva a seguir adelante y aumenta la adherencia a tus objetivos personales.</p>
+                    <ul class="feature-list">
+                        <li>Interfaz simple que invita a usar la app diariamente</li>
+                        <li>Visualización clara del progreso para mantener la motivación</li>
+                        <li>Registro duradero de tu evolución personal</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container fade-in">
+            <h2>¿Listo para trabajar juntos?</h2>
+            <p class="contact-description">
+                Estoy disponible para proyectos freelance remotos. 
+                Si tienes una idea o proyecto en mente, ¡hablemos!
+            </p>
+            <div class="contact-links">
+                <a href="mailto:contact.andresribon@gmail.com" class="contact-link">contact.andresribon@gmail.com</a>
+                <a href="https://www.linkedin.com/in/andresribon08" class="contact-link" target="_blank">LinkedIn</a>
+                <a href="https://github.com/contact-AndresRibon" class="contact-link" target="_blank">GitHub</a>
+                <a href="https://wa.me/57XXXXXXXXX" class="contact-link" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schema.org Markup - Software Application -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "HabitTracker",
+      "description": "Aplicación web para registrar, monitorear y celebrar tus hábitos diarios con rachas y estadísticas",
+      "creator": {
+        "@type": "Person",
+        "name": "Andres Ribon",
+        "url": "https://andresribon.com"
+      },
+      "applicationCategory": "LifestyleApplication",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "Consultar"
+      },
+      "featureList": [
+        "Registro de hábitos diarios",
+        "Visualización de rachas",
+        "Estadísticas personales",
+        "Sistema de recompensas",
+        "Interfaz responsiva y intuitiva"
+      ],
+      "technicalRequirements": "Navegador moderno con JavaScript habilitado"
+    }
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

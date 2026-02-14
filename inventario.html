@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inventario Empresarial: Aplicación web para digitalizar y optimizar la gestión de activos. Sistema CRUD con dashboard, reportes y búsqueda avanzada. Frontend React + Backend Node.js.">
+    <meta name="keywords" content="sistema inventario, aplicación web, gestión activos, CRUD, React, Node.js, dashboard empresarial, reportes, aplicación web profesional">
+    <meta name="author" content="Andres Ribon">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Inventario Empresarial - Sistema de Gestión de Activos">
+    <meta property="og:description" content="Aplicación web completa para digitalizar la gestión de inventarios. Incluye dashboard interactivo, búsqueda avanzada y generación de reportes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://andresribon.com/inventario">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Inventario Empresarial - Proyecto Frontend">
+    <meta name="twitter:description" content="Sistema web para gestión de inventarios con React y Node.js">
+    <link rel="canonical" href="https://andresribon.com/inventario">
+    <title>Inventario Empresarial | Sistema de Gestión de Activos | Proyecto React</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="presentacion-page">
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <div class="lightbox-content">
+            <button class="lb-close" aria-label="Cerrar">×</button>
+            <button class="lb-prev" aria-label="Anterior">❮</button>
+            <img class="lb-image" src="" alt="">
+            <button class="lb-next" aria-label="Siguiente">❯</button>
+            <div class="lb-caption"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="project-link">Volver al Portafolio</a> 
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>         
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#tech">Tecnologías</a></li>
+                <li><a href="#arquitectura">Implementación</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container fade-in">
+            <h1>Sistema de Inventario Empresarial</h1>
+            <p class="description">Inventario Empresarial es una aplicación web profesional para digitalizar y optimizar completamente la gestión de activos físicos en organizaciones de cualquier tamaño. Permite el registro detallado de elementos con nombre, SKU, ubicación, estado, fotos y notas, ofrece búsqueda y filtros avanzados, y entrega dashboards interactivos con KPIs y reportes analíticos para facilitar la toma de decisiones gerenciales.
+            <br><br>
+            La solución está diseñada con arquitectura modular y escalable: interfaz responsiva moderna, API segura documentada y componentes preparados para integrarse con ERPs y sistemas de auditoría profesionales. Entre los beneficios se encuentran mayor trazabilidad de activos, reducción del 85% en errores operativos y tiempos de consulta y auditoría significativamente menores.</p>
+        </div>
+    </section>
+
+    <!-- Demostración / Galería -->
+    <section id="galeria" class="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Galería del Sistema</h2>
+
+            <div class="projects-grid">
+                <figure class="project-card fade-in">
+                    <img src="recursos/inventario/Dashboard.png" alt="Dashboard Principal" loading="lazy" data-full="recursos/inventario/Dashboard.png">
+                    <figcaption class="project-content">
+                        <h3 class="project-title">Dashboard Principal</h3>
+                        <p class="project-description">Vista general del inventario con KPIs principales, gráficos interactivos y resumen de métricas clave.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="project-card fade-in">
+                    <img src="recursos/inventario/Formulario.png" alt="Formulario de Registro" loading="lazy" data-full="recursos/inventario/Formulario.png">
+                    <figcaption class="project-content">
+                        <h3 class="project-title">Formulario de Registro</h3>
+                        <p class="project-description">Interfaz intuitiva para agregar nuevos activos con validación en tiempo real y carga de imágenes.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="project-card fade-in">
+                    <img src="recursos/inventario/Reportes.png" alt="Sistema de Reportes" loading="lazy" data-full="recursos/inventario/Reportes.png">
+                    <figcaption class="project-content">
+                        <h3 class="project-title">Sistema de Reportes</h3>
+                        <p class="project-description">Generación automática de reportes detallados con filtros avanzados y exportación.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologías Section -->
+    <section id="tech">
+        <div class="container">
+            <div class="tech-block fade-in">
+                <h2 class="section-title">Stack Tecnológico</h2>
+                <div class="skills-grid">
+                    <div class="skill-category fade-in">
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript ES6+</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category fade-in">
+                        <h3>Backend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">REST API</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category fade-in">
+                        <h3>Herramientas</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Postman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementación Section -->
+    <section id="arquitectura" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">Implementación</h2>
+
+            <div class="features-grid">
+                <article class="feature-card fade-in">
+                    <h3 class="feature-title">Diseño técnico</h3>
+                    <p class="feature-body">Arquitectura SPA con frontend pensado para interfaces rápidas y accesibles, y backend en Node.js/Express que aporta API seguras y rendimiento escalable. Base de datos relacional optimizada para consultas complejas y reportes.</p>
+                    <ul class="feature-list">
+                        <li>API REST segura y documentada</li>
+                        <li>Componentes reutilizables y pruebas unitarias</li>
+                        <li>Despliegue mediante CI/CD y contenedores</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <h3 class="feature-title">Funcionalidades clave</h3>
+                    <p class="feature-body">Flujo completo de gestión de activos diseñado para operaciones reales: registro, edición masiva, búsqueda avanzada y generación de reportes configurables.</p>
+                    <ul class="feature-list">
+                        <li>Registro con múltiples imágenes y metadatos extensibles</li>
+                        <li>Búsqueda por campos, filtros y ordenamiento dinámico</li>
+                        <li>Exportación a PDF, Excel y CSV</li>
+                    </ul>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <h3 class="feature-title">Resultados e impacto</h3>
+                    <p class="feature-body">Digitalización del proceso de inventario que reduce errores y acelera auditorías. Implementación orientada a resultados con impacto medible en eficiencia operativa.</p>
+                    <ul class="feature-list">
+                        <li>Reducción estimada del 85% en errores de registro</li>
+                        <li>Consultas y auditorías más rápidas</li>
+                        <li>Escalable y adaptable a distintos sectores</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container fade-in">
+            <h2>¿Listo para trabajar juntos?</h2>
+            <p class="contact-description">
+                Estoy disponible para proyectos freelance remotos. 
+                Si tienes una idea o proyecto en mente, ¡hablemos!
+            </p>
+            <div class="contact-links">
+                <a href="mailto:contact.andresribon@gmail.com" class="contact-link">contact.andresribon@gmail.com</a>
+                <a href="https://www.linkedin.com/in/andresribon08" class="contact-link" target="_blank">LinkedIn</a>
+                <a href="https://github.com/contact-AndresRibon" class="contact-link" target="_blank">GitHub</a>
+                <a href="https://wa.me/57XXXXXXXXX" class="contact-link" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schema.org Markup - Creative Work -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Inventario Empresarial",
+      "description": "Sistema web de gestión de activos con dashboard, reportes y búsqueda avanzada",
+      "creator": {
+        "@type": "Person",
+        "name": "Andres Ribon",
+        "url": "https://andresribon.com"
+      },
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "Consultar"
+      },
+      "featureList": [
+        "Dashboard interactivo con KPIs",
+        "Búsqueda y filtros avanzados",
+        "Generación de reportes",
+        "Gestión de activos",
+        "Interfaz responsiva"
+      ],
+      "technicalRequirements": "Navegador moderno con JavaScript habilitado"
+    }
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
